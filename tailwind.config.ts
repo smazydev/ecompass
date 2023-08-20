@@ -13,8 +13,25 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'custom-grey': '#dadada',
+        'custom-blue': '#11407b',
+        'custom-red': '#e3291d',
+        'custom-orange': '#f79216',
+        'custom-black': '#1e1e20'
+      },
+      keyframes: {  // <- Add this section for the custom animation
+        ticker: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
+      },
+      animation: {  // <- Add this section to create a utility class for the animation
+        ticker: 'ticker 20s infinite linear',
+      }
     },
   },
   plugins: [],
 }
-export default config
+
+export default config;
