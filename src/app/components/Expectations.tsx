@@ -12,25 +12,27 @@ const Expectations = () => {
         </h3>
         <Image
           src={ExpectationsBanner}
-          alt={"expectations image"}
+          alt="expectations image"
           className="inline-block"
         />
         <Image
           src={Icon2}
-          alt={"expectations image 2"}
+          alt="expectations image 2"
           className="inline-block"
         />
       </div>
       <div className="flex justify-center">
         <div className="flex w-3/5 ">
           <p className="text-custom-grey mr-20">
-            custom digital strategy informed by a powerful appraisal & your
-            business deserves better than a pre-packaged strategy.
+            custom digital strategy informed by a powerful appraisal &apos;&
+            your business deserves better than a pre-packaged&apos; strategy.
           </p>
+
           <p className="text-custom-grey mr-20">
-            See the progress we're making and what's driving results, anytime,
-            we keep you consistently, transparently informed.
+            See the progress we&apos;re making and what&apos;s driving results,
+            anytime, we keep you consistently, transparently informed.
           </p>
+
           <p className="text-custom-grey">
             services that dovetail together for your greatest ROI, rowing in the
             same direction toward your growth goals.
