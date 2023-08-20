@@ -5,7 +5,7 @@ import Icon2 from "../assets/Icon2.png";
 
 const Expectations = () => {
   return (
-    <div className="bg-custom-black p-10 flex flex-col">
+    <div className="bg-custom-black p-10 pt-20 flex flex-col">
       <div className="flex items-center justify-center mb-10">
         <h3 className="text-white text-7xl uppercase mr-48">
           what we <br /> deliver

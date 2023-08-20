@@ -26,12 +26,12 @@ const teamMembers = [
 
 const TeamsSection = () => {
   return (
-    <div className="">
-      <div className="">
-        <Image src={teamMemers} alt={"team"} />
-        <div>
-          <h2>meet our teams</h2>
-          <p>
+    <div className=" flex items-center justify-center w-2/4">
+      <div className="flex items-center justify-center">
+        <Image src={teamMemers} alt="team" />
+        <div className="flex flex-col ml-8">
+          <h2 className="text-white text-5xl uppercase">meet our teams</h2>
+          <p className="mt-4 text-gray-600">
             our team consists of more than 80 experienced and very passionate
             people at the cutting edge of all things digital, we always give our
             best for you.
