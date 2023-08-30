@@ -10,42 +10,42 @@ const client = createClient({
 // Function to fetch landing page content
 export async function fetchLandingPageContent() {
   const query = `
-    *[_type == "landingPage"] {
-      brandName,
-      jumbotron {
-        heading,
-        image1 {
-          asset->,
-          alt
-        },
-        description,
-        ctaButton,
-        image2 {
-          asset->,
-          alt
-        }
+  *[_type == "landingPage"] {
+    brandName,
+    jumbotron {
+      heading,
+      image1 {
+        asset->,
+        alt
       },
-      services {
-        heading,
-        services
+      description,
+      ctaButton,
+      image2 {
+        asset->,
+        alt
+      }
+    },
+    services {
+      heading,
+      services
+    },
+    howItWorks {
+      title,
+      images[] {
+        asset->,
+        alt
       },
-      howItWorks {
-        title,
-        images[] {
-          asset->,
-          alt
-        },
-        steps[] {
-          stepNumber,
-          stepTitle,
-          description
-        }
-      },
-      clientTestimonial,
-      cta,
-      footerText
-    }
-  `;
+      steps[] {
+        stepNumber,
+        stepTitle,
+        description
+      }
+    },
+    clientTestimonial,
+    cta,
+    footerText
+  }
+  `
 
   const results = await client.fetch(query);
   return results // Assuming there's only one landing page document

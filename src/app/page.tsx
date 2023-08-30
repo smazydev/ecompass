@@ -17,7 +17,7 @@ import { fetchLandingPageContent } from "../../sanity/sanity-utils";
 
 export default async function Home() {
   const data = await fetchLandingPageContent();
-  console.log(data,'data')
+  console.log(data[0],'data')
   return (
     <main>
       <header>
