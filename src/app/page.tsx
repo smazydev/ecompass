@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Header from "./components/Header";
 import Jumbotron from "./components/Jumbotron";
@@ -11,8 +12,12 @@ import Clients from "./components/Clients";
 import ClientsLogoTicker from "./components/ClientsLogoTicker";
 import Ready from "./components/Ready";
 import Footer from "./components/Footer";
+import { fetchLandingPageContent } from "../../sanity/sanity-utils";
 
-export default function Home() {
+
+export default async function Home() {
+  const data = await fetchLandingPageContent();
+  console.log(data,'data')
   return (
     <main>
       <header>
@@ -22,21 +27,11 @@ export default function Home() {
         <Jumbotron />
         <JumbotronImg />
       </section>
-      <article>
-        <Client />
-      </article>
       <section className="bg-custom-black flex items-center justify-center w-screen">
         <Services />
       </section>
       <section className="flex items-center justify-center bg-custom-black w-screen">
         <Expectations />
-      </section>
-      <section className="bg-custom-black flex justify-center w-screen">
-        <TeamsSection />
-      </section>
-      <section className="bg-custom-black flex flex-col items-center justify-center w-screen h-full">
-        <Clients />
-        <ClientsLogoTicker />
       </section>
       <section className="bg-custom-black flex justify-center w-screen">
         <Ready />

@@ -8,7 +8,7 @@ const Expectations = () => {
     <div className="bg-custom-black p-10 pt-20 flex flex-col">
       <div className="flex items-center justify-center mb-10">
         <h3 className="text-white text-7xl uppercase mr-48">
-          what we <br /> deliver
+          how it<br /> works?
         </h3>
         <Image
           src={ExpectationsBanner}
@@ -22,21 +22,38 @@ const Expectations = () => {
         />
       </div>
       <div className="flex justify-center">
-        <div className="flex w-3/5 ">
-          <p className="text-custom-grey mr-20">
-            custom digital strategy informed by a powerful appraisal &apos;&
-            your business deserves better than a pre-packaged&apos; strategy.
+        <div className="flex w-5/6 items-center justify-evenly">
+          <div className="w-1/4 mr-2">
+            <h2 className="text-custom-grey uppercase text-sm">step 1.</h2>
+            <h1 className="text-white text-3xl font-bold mb-2">Tell us what problem you're trying to solve</h1>
+          <p className="text-custom-grey break-words ">
+          Want to use your data to learn more about your customers? Trying to uncover business efficiencies to save money? 
+          Looking for a custom-built app for your community? We can help.
           </p>
+          </div>
+         
+          <div className="w-1/4 mr-2">
+          <h2 className="text-custom-grey uppercase text-sm">step 2.</h2>
+            <h1 className="text-white text-3xl font-bold mb-2">We'll match you with the right engineers or team</h1>
+          <p className="text-custom-grey break-words">
+          We’ll pair you with a vetted, professional engineer or a team with the resources and industry expertise to take the reins and move your project forward.
+          </p>
+          </div>
+          <div className="w-1/4 mr-2">
+          <h2 className="text-custom-grey uppercase text-sm">step 3.</h2>
+            <h1 className="text-white text-3xl font-bold mb-2">Let’s collaborate, test, iterate, and repeat</h1>
+          <p className="text-custom-grey break-words mb-2">
+          Our approach is collaborative – so much that our clients view us as an extension of their own team.
+          </p>
+          </div>
+          <div className="w-1/4 mr-2">
+          <h2 className="text-custom-grey uppercase text-sm">step 4.</h2>
+            <h1 className="text-white text-3xl font-bold mb-2">Bring your ideas to life.</h1>
+            <p className="text-custom-grey break-words">
+          We believe in creating exceptional products – so much that our clients view us as an extension of their own team.
+          </p>
+          </div>
 
-          <p className="text-custom-grey mr-20">
-            See the progress we&apos;re making and what&apos;s driving results,
-            anytime, we keep you consistently, transparently informed.
-          </p>
-
-          <p className="text-custom-grey">
-            services that dovetail together for your greatest ROI, rowing in the
-            same direction toward your growth goals.
-          </p>
         </div>
       </div>
     </div>

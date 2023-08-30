@@ -12,7 +12,8 @@ const services = [
 
 const Services = () => {
   return (
-    <div className='bg-custom-black flex justify-start w-5/6 overflow-hidden h-80 border-t-2 border-b-2 border-custom-grey items-center relative ticker text-center'>
+    <div className='bg-custom-black flex flex-col w-5/6 overflow-hidden h-80 border-t-2 border-b-2 border-custom-grey items-center justify-center relative ticker text-center'>
+      <h1 className="text-4xl font-bold text-white uppercase mb-20">what we offer</h1>
       <div className="flex space-x-20 animate-ticker items-center w-5/6">
         {services.map((service, index) => (
           <>
