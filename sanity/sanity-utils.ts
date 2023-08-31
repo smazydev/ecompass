@@ -51,6 +51,57 @@ export async function fetchLandingPageContent() {
   return results // Assuming there's only one landing page document
 }
 
+
+export async function getBlogPost(slug:string) {
+  console.log(slug)
+  const query = `
+  *[_type == "post" && slug.current == $slug][0]{
+    title,
+    slug,
+    publishedAt,
+    author->{
+      name,
+      description,
+      image{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      }
+    },
+    mainImage{
+      asset->{
+        _id,
+        url
+      },
+      alt
+    },
+    categories[]->{
+      title,
+      description
+    },
+    body[]{
+      ...,
+      "blocks": of[]{
+        ...,
+        marks,
+        "link": marks.link.href
+      }
+    }
+  }
+  
+  
+  `
+  try {
+    const results = await client.fetch(query, {slug});
+    console.log(results);
+    return results;
+  } catch (error) {
+    console.error("Error fetching the post:", error);
+  }
+  
+}
 // Example usage in a Next.js page or API route:
 /*
 export async function getStaticProps() {

@@ -4,10 +4,49 @@ export default {
     type: 'document',
     fields: [
       {
-        name: 'brandName',
-        title: 'Brand Name',
-        type: 'image'
-      }, {
+        name: 'navbar',
+        title: 'Navbar',
+        type: 'object',
+        fields: [
+          {
+            name: 'logoImage',
+            title: 'Logo Image',
+            type: 'image',
+            fields: [
+              {
+                name: 'alt',
+                title: 'Alternative Text',
+                type: 'string'
+              }
+            ]
+          },
+          {
+            name: 'navLinks',
+            title: 'Navigation Links',
+            type: 'array',
+            of: [
+              {
+                type: 'object',
+                name: 'navLink',
+                title: 'Navigation Link',
+                fields: [
+                  {
+                    name: 'text',
+                    title: 'Link Text',
+                    type: 'string'
+                  },
+                  {
+                    name: 'url',
+                    title: 'URL',
+                    type: 'url'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         name: 'jumbotron',
         title: 'Jumbotron Section',
         type: 'object',
