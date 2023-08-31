@@ -21,10 +21,10 @@ const Blog = async ({ params }) => {
       <header>
         <Header />
       </header>
-      <StyledSection className="bg-custom-black flex justify-center w-screen h-fit p-10">
-        <div className="bg-white w-screen h-fit p-20 rounded-t-[100px] rounded-b-[100px] relative">
+      <StyledSection className=" bg-custom-black flex justify-center w-full px-4 md:px-10 lg:px-20">
+        <div className="mt-[3.25rem]  bg-white w-full max-w-screen-xl h-fit p-6 md:p-12 lg:p-20 rounded-[2rem] md:rounded-[4rem] lg:rounded-[6.25rem]">
           <div>
-            <h1 className="text-8xl font-bold capitalize">{title}</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold capitalize">{title}</h1>
             <div className="flex mt-4 ml-4">
               <div className="flex items-center">
                 <Avatar
