@@ -9,7 +9,13 @@ import Footer from "./components/Footer";
 import { fetchLandingPageContent } from "../../sanity/sanity-utils";
 
 // StyledSection component
-export function StyledSection({ children, className }) {
+
+type SectionProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export const StyledSection:React.FC<SectionProps> = ({ children, className })  => {
   return (
     <section className={className}>
       {children}
@@ -19,7 +25,7 @@ export function StyledSection({ children, className }) {
 
 export default async function Home() {
   const data = await fetchLandingPageContent();
-  console.log(data[0], 'data');
+
   
   return (
     <main>
