@@ -9,7 +9,14 @@ import { PortableTextInput } from "sanity";
 import { getBlogPost } from "../../../../sanity/sanity-utils";
 import Avatar from "@/app/components/Avatar";
 
-const Blog = async ({ params }) => {
+type BlogProps = {
+  params: {
+    blog: string;
+  };
+};
+
+
+const Blog: React.FC<BlogProps> = async ({ params }) => {
   const slug = params.blog;
   console.log(slug);
   const { title, author, body ,publishedAt,} = await getBlogPost(slug);
