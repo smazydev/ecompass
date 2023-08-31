@@ -1,7 +1,16 @@
 import Image from 'next/image';
 import React from 'react';
 
-function Avatar({ src, alt = "User Avatar", size = "small", username ,width, height}) {
+type AvatarProps = {
+    src:string;
+    alt:string;
+    size:string;
+    username:string;
+    width:number;
+    height:number;
+  };
+
+const Avatar:React.FC<AvatarProps> = ({ src, alt = "User Avatar", size = "small", username ,width, height}) => {
   const sizeClasses = {
     small: 'w-8 h-8',
     medium: 'w-16 h-16',
