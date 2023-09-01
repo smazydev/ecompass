@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="relative">
       {/* Main Header */}
-      <header className="flex items-center justify-between p-5 border bg-custom-grey w-screen">
+      <header className="flex items-center justify-between p-5 border bg-white w-screen">
         <ul className="hidden md:flex space-x-10">
           <li className="capitalize">about us</li>
           <li className="capitalize">team</li>

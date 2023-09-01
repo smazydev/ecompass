@@ -25,27 +25,25 @@ export const StyledSection:React.FC<SectionProps> = ({ children, className })  =
 
 export default async function Home() {
   const data = await fetchLandingPageContent();
-
-  
   return (
     <main>
       <header>
         <Header />
       </header>
-      <StyledSection className="relative h-full">
+      <StyledSection className="cursor-[url('/assets/cursor.svg'), auto] bg-white relative h-full">
         <Jumbotron />
         <JumbotronImg />
       </StyledSection>
-      <StyledSection className="bg-custom-black flex items-center justify-center w-screen">
+      <StyledSection className="bg-white flex items-center justify-center w-screen">
         <Services />
       </StyledSection>
-      <StyledSection className="flex items-center justify-center bg-custom-black w-screen">
+      <StyledSection className="flex items-center justify-center bg-white w-screen">
         <Expectations />
       </StyledSection>
-      <StyledSection className="bg-custom-black flex justify-center w-screen">
+      <StyledSection className="bg-white flex justify-center w-screen">
         <Ready />
       </StyledSection>
-      <StyledSection className="bg-custom-black flex justify-center w-screen">
+      <StyledSection className="bg-white flex justify-center w-screen">
         <Footer />
       </StyledSection>
     </main>

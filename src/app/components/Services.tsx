@@ -1,31 +1,68 @@
-import React from 'react';
+import React from "react";
+import glassmorphism from "../assets/Asset 5.png";
+import Image from "next/image";
 
 const services = [
-  'SEO',
-  'Brand Development',
-  'Software Development',
-  'App Development',
-  'Web Development',
-  'Content Writing',
-  'Digital Marketing'
+  {
+    title: "SEO",
+    description:
+      "Drive organic traffic to your website, ensuring visibility and ranking on search engines, crucial for online success.",
+  },
+  {
+    title: "Brand Development",
+    description:
+      "Establish a memorable identity, creating a lasting impression among consumers and fostering customer loyalty.",
+  },
+  {
+    title: "Software Development",
+    description:
+      "Customize solutions for your business needs, increasing efficiency and achieving specific goals.",
+  },
+  {
+    title: "App Development",
+    description:
+      "Engage users with intuitive mobile applications, catering to a vast audience in today's mobile-first world.",
+  },
+  {
+    title: "Web Development",
+    description:
+      "Showcase your online presence with functional and aesthetic websites, the digital face of your business.",
+  },
+  {
+    title: "Content Writing",
+    description:
+      "Deliver valuable information, establishing trust and authority among your audience, while driving engagement.",
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Promote your brand online, targeting specific audiences and ensuring a wider reach, optimizing ROI.",
+  },
 ];
 
 const Services = () => {
   return (
-    <div className='bg-custom-black flex flex-col w-5/6 overflow-hidden h-80 border-t-2 border-b-2 border-custom-grey items-center justify-center relative ticker text-center'>
-      <h1 className="text-4xl font-bold text-white uppercase mb-20">what we offer</h1>
-      <div className="flex space-x-20 animate-ticker items-center w-5/6">
-        {services.map((service, index) => (
-          <>
-           <h2 key={service} className="text-white text-4xl uppercase">
-            {service}
-          </h2>
-          <div className='h-5 w-5 bg-custom-grey'></div>
-          </>
-        ))}
+    <div className="bg-white p-10 pt-20 flex flex-col text-black items-center justify-center">
+      <div className="flex items-center justify-center h-full mb-20">
+        <h3 className="text-black text-7xl uppercase">What We Offer</h3>
+      </div>
+
+      <div className="flex justify-center">
+        <div className="flex w-5/6 items-center justify-evenly flex-wrap">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-6 w-72 h-auto border border-gray-200 bg-white rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:-translate-y-2.5 m-2 hover:shadow-xl"
+            >
+              <h2 className="text-black uppercase text-sm font-bold mb-2">{service.title}</h2>
+              <p className="text-black break-words text-center">{service.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
-}
+};
+
 
 export default Services;
