@@ -42,7 +42,7 @@ const HowItWorks = () => {
         <div className="mt-10 flex flex-wrap justify-center ">
           {steps.map((item, index) => {
             return (
-              <div className={`flex flex-col items-center p-5 w-full md:w-1/2 lg:w-full lg:flex-row ${index % 2 !== 1 ? 'lg:flex-row-reverse' : ''} lg:justify-center`}>
+              <div key={index} className={`flex flex-col items-center p-5 w-full md:w-1/2 lg:w-full lg:flex-row ${index % 2 !== 1 ? 'lg:flex-row-reverse' : ''} lg:justify-center`}>
                 <div className="flex flex-col items-center justify-center lg:text-left">
                   <h3 className="font-bold capitalize mb-2 mt-2">{item.step}</h3>
                   <h1 className="font-bold capitalize text-2xl mb-2 mt-2 lg:text-4xl lg:w-1/2">

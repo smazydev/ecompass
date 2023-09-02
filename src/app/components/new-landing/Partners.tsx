@@ -15,7 +15,7 @@ const clients = [
 const Partners = () => {
   return (
     <div className='flex flex-col items-center justify-center'>
-        <h1 className='text-2xl mb-4 font-bold text-center lg:text-5xl lg:font-bold'>Partners we've worked with</h1>
+        <h1 className='text-2xl mb-4 font-bold text-center lg:text-5xl lg:font-bold'>Partners we&apos;ve worked with</h1>
         <div className='grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 place-items-center'>
             {
                 clients.map((item, index) => {
