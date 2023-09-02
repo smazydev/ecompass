@@ -44,7 +44,7 @@ const Services = () => {
   return (
     <div className="bg-white p-10 pt-20 flex flex-col text-black items-center justify-center">
       <div className="flex items-center justify-center h-full mb-20">
-        <h3 className="text-black text-7xl uppercase">What We Offer</h3>
+        <h3 className="text-black text-xl font-bold uppercase">What We Offer</h3>
       </div>
 
       <div className="flex justify-center">
