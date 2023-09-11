@@ -17,6 +17,8 @@ const BlogCard = ({ post }) => {
         src={mainImage && mainImage.asset.url}
         alt={mainImage && mainImage.alt}
         className="w-full h-48 object-cover"
+        width={300}
+        height={300}
       />
       </Link>
       <Link href={`/blogs/${slug.current}`} passHref>
