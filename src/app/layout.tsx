@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Footer from './components/Footer'; // Import your Footer component
+import Navigation from './components/new-landing/Navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +21,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="./assets/favicon.png"/>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navigation /> {/* Render your Header component */}
+        {children} {/* Render the content */}
+        <Footer /> {/* Render your Footer component */}
+      </body>
     </html>
   )
 }

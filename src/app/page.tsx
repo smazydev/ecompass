@@ -54,16 +54,11 @@ export default async function Home() {
 
   return (
     <>
-      <main>
-        <Navigation />
-      </main>
       <Hero />
       <Partners />
       <HowItWorks />
       <Services />
       <Ready />
-
-      <Footer />
     </>
   );
 }
