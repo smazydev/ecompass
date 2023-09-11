@@ -28,7 +28,7 @@ interface Block {
   // Define the properties for block items as needed
 }
 
-interface Post {
+export interface Post {
   title: string;
   slug: string;
   publishedAt: string;

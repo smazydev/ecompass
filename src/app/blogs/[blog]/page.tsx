@@ -2,7 +2,7 @@
 import { StyledSection } from "@/app/page";
 import { PortableText } from "@portabletext/react";
 import { format } from "date-fns";
-import {
+import Post, {
   fetchAdsByCategory,
   getBlogPost,
 } from "../../../../sanity/sanity-utils";
@@ -18,7 +18,7 @@ type BlogProps = {
 
 const Blog: React.FC<BlogProps> = async ({ params }) => {
   const slug = params.blog;
-  let bPost, adverts;
+  let bPost:Post, adverts;
 
   async function fetchData() {
     try {
@@ -33,10 +33,7 @@ const Blog: React.FC<BlogProps> = async ({ params }) => {
         const ads = await fetchAdsByCategory(title);
         bPost = blogPost;
         adverts = ads;
-      } else {
-        bPost = blogPost;
-        adverts = [];
-      }
+      } 
     } catch (error) {
       // Handle errors
       console.error("Error:", error);
@@ -45,9 +42,6 @@ const Blog: React.FC<BlogProps> = async ({ params }) => {
 
   await fetchData();
 
-  if (!bPost && !adverts) {
-    return <h1>Loading</h1>
-  } 
 
   return (
     <>
