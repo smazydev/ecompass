@@ -75,22 +75,7 @@ const Blog: React.FC<BlogProps> = async ({ params }) => {
                 </div>
               </div>
               <div className="w-4/5">
-                <PortableText value={bPost.body}  serializers={{
-                h1: (props: any) => (
-                  <h1 className="my-5 text-2xl font-bold" {...props}></h1>
-                ),
-                h2: (props: any) => (
-                  <h1 className="my-5 text-xl font-bold" {...props}></h1>
-                ),
-                li: ({ children }: any) => (
-                  <li className="ml-4 list-disc">{children}</li>
-                ),
-                link: ({ children, href }: any) => (
-                  <a href={href} className="text-blue-500 hover:underline">
-                    {children}
-                  </a>
-                ),
-              }}/>
+                <PortableText value={bPost.body} />
               </div>
             </div>
           )}
