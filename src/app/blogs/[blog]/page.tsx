@@ -29,11 +29,17 @@ const Blog: React.FC<BlogProps> = async ({ params }) => {
       if (blogPost != undefined) {
         ads = await fetchAdsByCategory(blogPost.categories[0].title);
       }
+
+      if (blogPost != undefined) {
+        return { blogPost: blogPost, ads: ads };
+      }
+
+    
     } catch (error) {
       // Handle errors
       console.error("Error:", error);
     }
-    return { blogPost: blogPost, ads: ads };
+    return { blogPost: null, ads: [] };
   }
 
   const { blogPost, ads } = await fetchData();
