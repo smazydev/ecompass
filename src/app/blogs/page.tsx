@@ -11,9 +11,10 @@ const Blogs = async () => {
         <h1 className="text-5xl text-center">Recent blog posts</h1>
       </div>
       <div className="flex">
-        {blogPosts.map((item, index) => {
-          return <BlogCard post={item} key={index} />;
-        })}
+        {blogPosts != undefined &&
+          blogPosts.map((item, index) => {
+            return <BlogCard post={item} key={index} />;
+          })}
       </div>
     </div>
   );

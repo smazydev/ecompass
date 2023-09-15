@@ -19,7 +19,7 @@ interface Author {
   };
 }
 
-interface Category {
+export interface Category {
   title: string;
   description: string;
 }
