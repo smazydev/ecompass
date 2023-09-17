@@ -6,7 +6,7 @@ type NavLinksProps = {
 };
 
 const Navlinks: React.FC<NavLinksProps> = ({ invert }) => {
-  const links = ["About Us", "Blogs", "Portfolio"];
+  const links = ["Home","About Us", "Blogs",];
   const terms = [
     "terms and services",
     "frequently asked questions",
@@ -19,6 +19,7 @@ const Navlinks: React.FC<NavLinksProps> = ({ invert }) => {
       return (
         <Link
           href={`${
+            (url === "home" && "/") ||
             (url === "about us" && "/about") ||
             (url === "blogs" && "/blogs") ||
             (url === "portfolio" && "/portfolio")

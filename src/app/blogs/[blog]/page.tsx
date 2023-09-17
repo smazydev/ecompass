@@ -8,6 +8,7 @@ import Post, {
 import marketingImg from "../../assets/digitalmkt.jpg";
 import Avatar from "@/app/components/Avatar";
 import Image from "next/image";
+import TextComponents from "@/app/components/new-landing/TextComponents";
 
 type BlogProps = {
   params: {
@@ -70,7 +71,7 @@ const Blog: React.FC<BlogProps> = async ({ params }) => {
                 </div>
               </div>
               <div className="w-4/5">
-                <PortableText value={blogPost.body as any} />
+                <PortableText value={blogPost.body as any} components={TextComponents} />
               </div>
             </div>
           )}
